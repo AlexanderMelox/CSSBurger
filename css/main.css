@@ -19,6 +19,17 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.4rem;
@@ -34,17 +45,32 @@ h4,
 h5,
 h6 {
   font-family: 'Oswald', 'Poppins', sans-serif;
-  text-shadow: 5px 9px 0 rgba(0, 0, 0, 0.15);
-  letter-spacing: 1px;
+  letter-spacing: -1px;
   font-weight: 600;
   line-height: 1.1;
+}
+
+h2 {
+  text-shadow: 5px 9px 0 rgba(0, 0, 0, 0.15);
+}
+
+.section__heading {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section__lead {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  text-align: center;
 }
 
 .header {
   width: 100%;
   background-color: transparent;
   font-family: 'Oswald', sans-serif;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: transparent;
@@ -81,6 +107,21 @@ h6 {
 .header .nav {
   visibility: hidden;
   opacity: 0;
+}
+
+.header .nav.nav-visible {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.header .nav.nav-visible a {
+  color: #353535;
 }
 
 .header .hamburger {
@@ -152,4 +193,80 @@ h6 {
 
 .intro__lead {
   line-height: 2;
+}
+
+.services .service {
+  text-align: center;
+  padding: 5rem 3rem;
+  border-bottom: 3px solid #f0f0f0;
+}
+
+.services .service i {
+  display: block;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+}
+
+.services .service__subtitle {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+
+.services .service__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.services .service p {
+  line-height: 1.8;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 815px) {
+  .services .service:nth-child(2), .services .service:nth-child(5) {
+    border-left: 3px solid #f0f0f0;
+    border-right: 3px solid #f0f0f0;
+  }
+  .services .service:nth-child(n+4) {
+    border-bottom: none;
+  }
+  .services .service__container {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 4rem;
+  padding: 1rem 3rem;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.btn--black {
+  color: #353535;
+  border: 2px solid #353535;
+}
+
+.btn:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  top: 1rem;
+  left: 1rem;
+  transition: top .15s,left .15s;
 }

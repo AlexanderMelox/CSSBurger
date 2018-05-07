@@ -2,7 +2,7 @@
   width: 100%;
   background-color: transparent;
   font-family: 'Oswald', sans-serif;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: transparent;
@@ -39,18 +39,20 @@
     visibility: hidden;
     opacity: 0;
     
-    // &.nav-visible {
-    //   visibility: visible;
-    //   opacity: 1;
-    //   position: fixed;
-    //   top: 0;
-    //   left: 0;
-    //   height: 100vh;
+    &.nav-visible {
+      visibility: visible;
+      opacity: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: $color-white;
       
-    //   a {
-    //     color: $color-black;
-    //   }
-    // }
+      a {
+        color: $color-black;
+      }
+    }
   }
 
   .hamburger {

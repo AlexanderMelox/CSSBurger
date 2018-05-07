@@ -5,3 +5,14 @@ html {
 body {
   box-sizing: border-box;
 }
+
+.container {
+  max-width: $grid-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}

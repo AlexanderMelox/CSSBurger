@@ -1,0 +1,55 @@
+.services {
+
+  .service {
+    text-align: center;    
+    padding: 5rem 3rem;
+    border-bottom: $border;
+
+    i {
+      display: block;
+      font-size: 7rem;
+      margin-bottom: 2rem;
+    }
+
+    &__subtitle {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+
+    &__title {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 815px){
+  .services {
+
+    .service {
+
+      &:nth-child(2),
+      &:nth-child(5) {
+        border-left: $border;
+        border-right: $border;
+      }
+
+      &:nth-child(n+4) {
+        border-bottom: none;
+      }
+
+      &__container {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+  }
+}
+
+
