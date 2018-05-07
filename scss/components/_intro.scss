@@ -1,0 +1,52 @@
+.intro {
+  height: auto;
+  padding: 12rem 3rem 10rem;
+  background-image: 
+        linear-gradient(to bottom right, rgba($color-primary, .8), rgba($color-primary-light, .8)),
+        url('../img/intro.jpg');
+  @include backgroundImg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+  text-align: center;
+
+  &__heading {
+    text-shadow: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      margin: 0 auto;
+      width: 14rem;
+      height: 1.6rem;  
+      margin-bottom: 1rem;
+      
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50%;
+
+      background-image: url(../img/wave-white.png);
+    }
+
+    small {
+      display: block;
+      font-weight: 300;
+    }
+
+    span {
+      font-size: 7rem;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+      line-height: 1;
+      padding: 4rem 0 2rem 0;
+      display: block;
+    }
+  }
+
+  &__lead {
+    line-height: 2;
+  }
+}

@@ -44,33 +44,112 @@ h6 {
   width: 100%;
   background-color: transparent;
   font-family: 'Oswald', sans-serif;
-}
-
-.header .nav {
-  width: 100%;
-}
-
-.header .nav.nav-visible {
-  visibility: visible;
-  opacity: 1;
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  padding: 1.4rem;
+  text-transform: uppercase;
 }
 
-.header .nav.nav-visible a {
-  color: #353535;
+.header a:link,
+.header a:visited {
+  color: #fff;
+}
+
+.header__logo {
+  height: 6rem;
+  width: 6rem;
+  position: relative;
+}
+
+.header__logo span {
+  position: absolute;
+  top: 1rem;
+  right: -7rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.header__logo img {
+  width: 5rem;
+}
+
+.header .nav {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .header .hamburger {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1000;
+  padding: 3rem;
+}
+
+.header .hamburger-inner,
+.header .hamburger-inner::before,
+.header .hamburger-inner::after {
+  background-color: #fff;
 }
 
 .header .nav-visible .hamburger-inner,
 .header .nav-visible .hamburger-inner::before,
 .header .nav-visible .hamburger-inner::after {
   background-color: #353535;
+}
+
+.intro {
+  height: auto;
+  padding: 12rem 3rem 10rem;
+  background-image: linear-gradient(to bottom right, rgba(0, 160, 210, 0.8), rgba(115, 203, 230, 0.8)), url("../img/intro.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.intro__heading {
+  text-shadow: none;
+  position: relative;
+}
+
+.intro__heading::after {
+  content: "";
+  display: inline-block;
+  margin: 0 auto;
+  width: 14rem;
+  height: 1.6rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+  background-image: url(../img/wave-white.png);
+}
+
+.intro__heading small {
+  display: block;
+  font-weight: 300;
+}
+
+.intro__heading span {
+  font-size: 7rem;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  line-height: 1;
+  padding: 4rem 0 2rem 0;
+  display: block;
+}
+
+.intro__lead {
+  line-height: 2;
 }
