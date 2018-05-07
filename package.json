@@ -1,0 +1,21 @@
+{
+  "name": "cssburger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp dev"
+  },
+  "author": "Alexander Melo",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1"
+  }
+}
