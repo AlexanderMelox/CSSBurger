@@ -6,8 +6,17 @@
   box-sizing: inherit;
 }
 
+a:link,
+a:active {
+  text-decoration: none;
+}
+
 html {
   font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 body {
@@ -15,6 +24,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.6;
   color: #353535;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -25,4 +35,42 @@ h5,
 h6 {
   font-family: 'Oswald', 'Poppins', sans-serif;
   text-shadow: 5px 9px 0 rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.header {
+  width: 100%;
+  background-color: transparent;
+  font-family: 'Oswald', sans-serif;
+}
+
+.header .nav {
+  width: 100%;
+}
+
+.header .nav.nav-visible {
+  visibility: visible;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.header .nav.nav-visible a {
+  color: #353535;
+}
+
+.header .hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.header .nav-visible .hamburger-inner,
+.header .nav-visible .hamburger-inner::before,
+.header .nav-visible .hamburger-inner::after {
+  background-color: #353535;
 }

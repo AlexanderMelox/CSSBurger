@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CssBurger</title>
+  <title>CSSBurger</title>
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald:500|Poppins:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:500,600|Poppins:300,400" rel="stylesheet">
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+  <!-- Vendor -->
+  <link rel="stylesheet" href="css/vendor/hamburger.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/main.min.css">
@@ -18,8 +22,41 @@
 </head>
 <body>
   
-  <h1>Testing</h1>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus vel odit, beatae natus similique repellat animi voluptas ut? Sit, quibusdam eaque rerum esse consequatur officia obcaecati necessitatibus magni sapiente. Magnam!
+  <header class="header header--white">
+    <a href="/" class="header__logo">
+      <img src="img/logo.png" alt="CSSBurger Logo">
+    </a>
+    <nav class="nav  nav-shown">
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#">Services</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Samples</a>
+        </li>
+        <li>
+          <a href="#">Reviews</a>
+        </li>
+        <li>
+          <a href="#">Labs</a>
+        </li>
+        <li>
+          <a href="#">Order Now</a>
+        </li>
+      </ul>
+      <button class="hamburger hamburger--elastic " type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button> 
+    </nav>
+  </header>
 
   <!-- JS -->
   <script src="js/jquery.min.js"></script>

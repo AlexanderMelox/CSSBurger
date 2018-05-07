@@ -4,6 +4,7 @@ body {
   font-size: $default-font-size;
   line-height: 1.6;
   color: $color-black;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -14,4 +15,7 @@ h5,
 h6 {
   font-family: 'Oswald', 'Poppins', sans-serif;
   text-shadow: 5px 9px 0 rgba(0,0,0,.15);
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 1.1;
 }
