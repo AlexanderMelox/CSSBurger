@@ -31,22 +31,8 @@ gulp.task('css:minify', ['css:compile'], function() {
 // CSS
 gulp.task('css', ['css:compile', 'css:minify']);
 
-// Minify JavaScript
-gulp.task('js:minify', function() {
-  return gulp.src([
-      './js/*.js',
-      '!./js/*.min.js'
-    ])
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./js'))
-    .pipe(browserSync.stream());
-});
-
 // JS
-gulp.task('js', ['js:minify']);
+// gulp.task('js', ['js:minify']);
 
 // Default
 gulp.task('default', ['css']);
@@ -60,8 +46,8 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('dev', ['css', 'js', 'browserSync'], function() {
+gulp.task('dev', ['css', 'browserSync'], function() {
   gulp.watch('./scss/**/*.scss', ['css']);
-  gulp.watch('./js/*.js', ['js']);
+  gulp.watch('./js/*.js', browserSync.reload());
   gulp.watch('*.html', browserSync.reload());
 });
