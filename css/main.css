@@ -123,19 +123,45 @@ h2 {
   font-size: 2rem;
 }
 
-.header .nav ul {
-  list-style: none;
-}
-
-.header .nav li a {
+.header .nav__link {
   padding: 2rem;
   display: block;
   transition: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-top: 3px solid 3px solid #f0f0f0;
+  font-weight: bold;
 }
 
-.header .nav li a:hover, .header .nav li a:active {
+.header .nav__link:hover, .header .nav__link:active {
   letter-spacing: 2px;
-  transform: scale(1.1);
+  transform: scale(1.2) rotate(-2deg);
+  color: #00A0D2 !important;
+}
+
+.header .nav__link--active:link, .header .nav__link--active:visited {
+  border: 3px solid #00A0D2;
+  border-radius: .5rem;
+  position: relative;
+}
+
+.header .nav__link--active:link:hover::before, .header .nav__link--active:visited:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.header .nav__link--active:link::before, .header .nav__link--active:visited::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  top: 1rem;
+  left: 1rem;
+  transition: top .15s,left .15s;
+}
+
+.header .nav ul {
+  list-style: none;
 }
 
 .header .nav.nav-visible {
@@ -159,6 +185,7 @@ h2 {
   right: 0;
   z-index: 3000;
   padding: 3rem;
+  outline: 0;
 }
 
 .header .hamburger-inner,

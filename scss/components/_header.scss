@@ -53,20 +53,47 @@
     text-align: center;
     font-size: 2rem;
 
-    ul {
-      list-style: none;
-    }
-
-    li a {
+    &__link {
       padding: 2rem;
       display: block;
       transition: .2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border-top: 3px solid $border;
+      font-weight: bold;
 
       &:hover,
       &:active {
         letter-spacing: 2px;
-        transform: scale(1.1);
+        transform: scale(1.2) rotate(-2deg);
+        color: $color-primary !important;
       }
+
+      &--active:link,
+      &--active:visited {
+        border: 3px solid $color-primary;
+        border-radius: .5rem;
+        position: relative;
+
+        &:hover::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,.1);
+          border-radius: .5rem;
+          top: 1rem;
+          left: 1rem;
+          transition: top .15s,left .15s;
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
     }
     
     &.nav-visible {
@@ -91,6 +118,7 @@
     right: 0;
     z-index: 3000;
     padding: 3rem;
+    outline: 0;
   }
 
   .hamburger-inner,
